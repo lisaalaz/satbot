@@ -1,0 +1,26 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 12.5px;
+  margin-bottom: 15px;
+}
+
+.option {
+  border-radius: 25px;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid #4A4A4A;
+  color: #4A4A4A;
+  font-family: arial;
+  font-size: 0.95rem;
+  margin: 4px;
+  background: #fff;
+  text-align: left;
+}
+
+.option:hover {
+  background-image: linear-gradient(to bottom left, #6673f6, #55bff7);
+  color: #fff;
+  border-color: #fff;
+}
