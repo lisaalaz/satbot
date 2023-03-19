@@ -33,3 +33,4 @@ export FLASK_DEBUG=1
 
 # ~ Launch flask ~ #
 flask run --eager-loading
+```
