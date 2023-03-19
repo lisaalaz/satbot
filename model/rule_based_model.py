@@ -15,7 +15,7 @@ import time
 class ModelDecisionMaker:
     def __init__(self):
 
-        self.data = pd.read_csv('/Users/lisaxy/satbot1.2/model/ep12.csv', encoding='ISO-8859-1') #change path
+        self.data = pd.read_csv('/Users/lisaxy/SATbot1.2/model/ep12.csv', encoding='ISO-8859-1') #change path
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.EXERCISE_TITLES = [
@@ -27,19 +27,18 @@ class ModelDecisionMaker:
             "5: Pledging to support and care for the Child",
             "6: Restoring our emotional world",
             "7: Maintaining a loving relationship with the Child and creating zest for life",
-            "8: Enjoying nature", #it says "on one day this week. should it change? Also says "achieving this will help you want to spend more time in nature after this course ends"
-            "9: Overcoming current negative emotions",
+            "8: Enjoying nature",
             "10: Overcoming past pain",
-            "11: Muscle relaxation and playful face for intentional laughing", #this says early in the morning. should it change?
-            "12: Victory laughter on our own", #"immediately after"...can this be changed
+            "11: Muscle relaxation and playful face for intentional laughing",
+            "12: Victory laughter on our own",
             "13: Laughing with our childhood self",
             "14: Intentional laughter",
             "15: Learning to change your perspective",
             "16: Learning to be playful about your past pains",
             "17: Identifying patterns of acting out personal resentments",
             "18: Planning more constructive actions",
-            "19: Updating our rigid beliefs to enhance creativity", #this says new topic every dat. should it change?
-            "20: Practicing Affirmations", #are the inspirational affirmations already chosen during the course or can they be chosen/rechosen?
+            "19: Updating our rigid beliefs to enhance creativity",
+            "20: Practicing Affirmations",
             "21: Recognizing and containing the internal persecutor",
             "22: Solving personal crises",
             "23: Discovering your true, free, and sovereign self in this age of emergency",
