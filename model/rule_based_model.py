@@ -44,7 +44,6 @@ class ModelDecisionMaker:
             "22: Solving personal crises",
             "23: Discovering your true, free, and sovereign self in this age of emergency", 
         ]
-        #checked 7, 8, 9, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 
 
         self.TITLE_TO_EXERCISE = {
             self.EXERCISE_TITLES[i]: i for i in range(len(self.EXERCISE_TITLES))
@@ -827,7 +826,7 @@ class ModelDecisionMaker:
           base_prompt = self.user_emotions[user_id] + text
         else:
           base_prompt = text
-        column = self.data[base_prompt].dropna().sample(25, replace=True)
+        column = self.data[base_prompt].dropna().sample(10)
         question = self.get_best_sentence(column, prev_qs)
         if len(self.recent_questions[user_id]) < 50:
             self.recent_questions[user_id].append(question)

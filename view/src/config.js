@@ -10,7 +10,7 @@ import EmotionOptions from "./widgets/options/GeneralOptions/EmotionOptions";
 import EventOptions from "./widgets/options/GeneralOptions/EventOptions";
 import YesNoProtocolOptions from "./widgets/options/GeneralOptions/YesNoProtocolsOptions";
 
-import Kai from "./Kai.png"
+// import Kai from "./Kai.png"
 
 const botName = "SATbot";
 
@@ -24,7 +24,7 @@ const botName = "SATbot";
 const config = {
   botName: botName,
   initialMessages: [
-    createChatBotMessage("Hi, I am SATbot, your friendly Self-Attachment Technique coach. Welcome to today's session.", {
+    createChatBotMessage("Hi, I am SATbot, welcome to today's session.", {
       withAvatar: true,
       delay: 0,
     }),
@@ -48,7 +48,7 @@ const config = {
   },
 
   customComponents: {
-    header: () => <div style={{height: '15px', fontFamily: 'Trebuchet MS', fontSize: "16px", textAlign: "center", color: '#fff', padding: '20px'}}>S A T B O T</div>,
+    header: () => <div style={{height: '15px', fontFamily: 'Trebuchet MS', fontSize: "1em", textAlign: "center", color: '#fff', paddingTop: '1em', paddingBottom: '1em'}}>S A T B O T</div>,
     // botAvatar: (props) => <div class="react-chatbot-kit-chat-bot-avatar-container" style={{fontFamily: 'Arial'}}>
     //   {getPersona()} </div>
     },
