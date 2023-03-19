@@ -1,1 +1,7 @@
-New version of the bot. To build use the same instructions as before.
+SATbot is a dialogue agent for guiding users through Self-Attachment Technique psychotherapy.
+
+![application preview](https://github.com/LisaAlaz/SATbot1.2/blob/master/view/preview.png?raw=true)
+
+To run SATbot, first download the two models at https://drive.google.com/file/d/1cycrYd0S3Go7j3W2A50bJKQBn-oCdgZs/view?usp=sharing and https://drive.google.com/file/d/1HGmTFL-P4cXIInszLM3QjnuCVLj6zz7C/view?usp=sharing and place them in the 'model' subfolder.
+
+Then run the backend and the frontend in two separate terminals following the instructions in the README files of the 'model' and 'view' subfolders respectively.
