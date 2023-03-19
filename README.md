@@ -1,4 +1,4 @@
-SATbot is a dialogue agent for guiding users through Self-Attachment Technique psychotherapy.
+SATbot is an empathetic dialogue agent for guiding users through Self-Attachment Technique psychotherapy.
 
 ![application preview](https://github.com/LisaAlaz/SATbot1.2/blob/master/view/preview.png?raw=true)
 
