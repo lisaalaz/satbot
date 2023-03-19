@@ -15,7 +15,7 @@ import time
 class ModelDecisionMaker:
     def __init__(self):
 
-        self.data = pd.read_csv('/Users/lisaxy/satbot2.0/model/empatheticPersonas12_responses_only_with_scores.csv', encoding='ISO-8859-1') #change path
+        self.data = pd.read_csv('/Users/lisaxy/satbot1.2/model/ep12.csv', encoding='ISO-8859-1') #change path
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.EXERCISE_TITLES = [
@@ -26,23 +26,23 @@ class ModelDecisionMaker:
             "4: Expressing love and care for the Child",
             "5: Pledging to support and care for the Child",
             "6: Restoring our emotional world",
-            "7: Maintaining a loving relationship with the Child and creating zest for life", 
+            "7: Maintaining a loving relationship with the Child and creating zest for life",
             "8: Enjoying nature", #it says "on one day this week. should it change? Also says "achieving this will help you want to spend more time in nature after this course ends"
-            "9: Overcoming current negative emotions", 
-            "10: Overcoming past pain", 
+            "9: Overcoming current negative emotions",
+            "10: Overcoming past pain",
             "11: Muscle relaxation and playful face for intentional laughing", #this says early in the morning. should it change?
             "12: Victory laughter on our own", #"immediately after"...can this be changed
-            "13: Laughing with our childhood self",  
-            "14: Intentional laughter", 
-            "15: Learning to change your perspective", 
-            "16: Learning to be playful about your past pains", 
-            "17: Identifying patterns of acting out personal resentments", 
-            "18: Planning more constructive actions", 
+            "13: Laughing with our childhood self",
+            "14: Intentional laughter",
+            "15: Learning to change your perspective",
+            "16: Learning to be playful about your past pains",
+            "17: Identifying patterns of acting out personal resentments",
+            "18: Planning more constructive actions",
             "19: Updating our rigid beliefs to enhance creativity", #this says new topic every dat. should it change?
             "20: Practicing Affirmations", #are the inspirational affirmations already chosen during the course or can they be chosen/rechosen?
-            "21: Recognizing and containing the internal persecutor", 
+            "21: Recognizing and containing the internal persecutor",
             "22: Solving personal crises",
-            "23: Discovering your true, free, and sovereign self in this age of emergency", 
+            "23: Discovering your true, free, and sovereign self in this age of emergency",
         ]
 
         self.TITLE_TO_EXERCISE = {
@@ -148,7 +148,7 @@ class ModelDecisionMaker:
 
             # The rest should just be recommended in numerical order.
         }
-        
+
         self.exercises = [i for i in range(1, 24)]
 
         # Goes from user id to actual value
@@ -178,7 +178,7 @@ class ModelDecisionMaker:
         #                           }
         # This could be adapted to be part of a JSON file (would need to address
         # mapping callable functions over for parsing).
-        
+
         self.guess_location_predictions = {}
         self.users_location = {}
 
@@ -645,7 +645,7 @@ class ModelDecisionMaker:
         self.guess_location_predictions[user_id] = country
         self.users_location[user_id] = country
         return "check_location"
-    
+
     def ask_location_prompt(self, user_id):
         prompt = ["Apologies about that. Please enter again the country where you are located.",
                   "If possible, please enter the that country's name in English, so I can be sure I understand.",
@@ -669,7 +669,7 @@ class ModelDecisionMaker:
             if ranked_exercise in reccomendations_collected:
                 final_reccomendations.append(ranked_exercise)
                 reccomendations_collected.remove(ranked_exercise)
-    
+
         final_reccomendations.extend(reccomendations_collected)
         return final_reccomendations
 
@@ -729,7 +729,7 @@ class ModelDecisionMaker:
             user_response = self.user_choices[user_id]["choices_made"]["opening_prompt"]
         emotion = get_classification(user_response, "emo")
         s_classification = get_classification(user_response, "s")
-        
+
         if emotion == 'fear':
             self.guess_emotion_predictions[user_id] = 'Anxious/Scared'
             self.user_emotions[user_id] = 'Anxious'
@@ -765,13 +765,13 @@ class ModelDecisionMaker:
             self.user_emotions[user_id] = 'Envious'
         else:
             self.guess_emotion_predictions[user_id] = 'Jealous'
-            self.user_emotions[user_id] = 'Jealous'    
-        
+            self.user_emotions[user_id] = 'Jealous'
+
         if s_classification == 'not_s':
             return "guess_emotion"
         else:
             return "show_help_options"
-        
+
     def get_help_options(self, user_id, app, db_session):
         current_country = self.users_location[user_id]
         prompt1 = ["From what you just told me, I sensed that you might be feeling suicidal.",
@@ -858,7 +858,7 @@ class ModelDecisionMaker:
             "Here are my instructions to complete the exercise:"
         ]
         return random.choice(prompts)
-    
+
     def get_model_prompt_project_emotion(self, user_id, app, db_session):
         time.sleep(3)
         prompts = [
@@ -870,7 +870,7 @@ class ModelDecisionMaker:
         ]
         chosen_utterance = random.choice(prompts)
         return self.split_sentence(chosen_utterance)
-        
+
     def determine_next_prompt_new_exercise(self, user_id, app):
         try:
             self.suggestions[user_id]
@@ -1144,7 +1144,7 @@ class ModelDecisionMaker:
         if next_choice == "suggestions" or next_choice == "follow_up_suggestions":
             next_choices = self.get_suggestions(user_id, app)
             if len(next_choices) == 0:
-                return {"model_prompt": "Unfortunately I have no more exercises to recommend for the current session. You can start a new session by refreshing the page. Goodbye!", 
+                return {"model_prompt": "Unfortunately I have no more exercises to recommend for the current session. You can start a new session by refreshing the page. Goodbye!",
                         "choices": []}
 
         else:
