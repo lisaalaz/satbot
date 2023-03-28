@@ -1,6 +1,6 @@
 SATbot is an empathetic dialogue agent for guiding users through Self-Attachment Technique psychotherapy.
 
-![application preview](https://github.com/LisaAlaz/SATbot1.2/blob/master/view/preview.png?raw=true)
+![application preview](https://github.com/LisaAlaz/SATbot/blob/master/view/preview.png?raw=true)
 
 To run SATbot, first download the two models at https://drive.google.com/file/d/1cycrYd0S3Go7j3W2A50bJKQBn-oCdgZs/view?usp=sharing and https://drive.google.com/file/d/1HGmTFL-P4cXIInszLM3QjnuCVLj6zz7C/view?usp=sharing and place them in the 'model' subfolder.
 
