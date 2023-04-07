@@ -15,7 +15,7 @@ import time
 class ModelDecisionMaker:
     def __init__(self):
 
-        self.data = pd.read_csv('/Users/lisaxy/SATbot1.2/model/ep12.csv', encoding='ISO-8859-1') #change path
+        self.data = pd.read_csv('/Users/lisaxy/satbot2.0/model/empatheticPersonas12_responses_only_with_scores.csv', encoding='ISO-8859-1') #change path
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.EXERCISE_TITLES = [
@@ -28,6 +28,7 @@ class ModelDecisionMaker:
             "6: Restoring our emotional world",
             "7: Maintaining a loving relationship with the Child and creating zest for life",
             "8: Enjoying nature",
+            "9: Overcoming current negative emotions",
             "10: Overcoming past pain",
             "11: Muscle relaxation and playful face for intentional laughing",
             "12: Victory laughter on our own",
@@ -38,7 +39,7 @@ class ModelDecisionMaker:
             "17: Identifying patterns of acting out personal resentments",
             "18: Planning more constructive actions",
             "19: Updating our rigid beliefs to enhance creativity",
-            "20: Practicing Affirmations",
+            "20: Practicing Affirmations", #todo: check this
             "21: Recognizing and containing the internal persecutor",
             "22: Solving personal crises",
             "23: Discovering your true, free, and sovereign self in this age of emergency",
@@ -74,7 +75,7 @@ class ModelDecisionMaker:
                 "7a: Choose some short phrase, e.g., 'You are my beautiful child' or 'My love'. Say it slowly, out loud at least five times as you look at the happy photo/avatar. Then sing your favourite chosen love song at least five times. As previously, increase your volume and begin to use your whole body.",
                 "7b: While looking in a mirror, imagine your image to be that of the Child (i.e., your emotional self), then begin to loudly sing your previously chosen song. As previously, increase your volume and begin to use your whole body. (If you find it difficult to imagine the Child in the mirror, put the 'Happy' photo of your Child in front of the mirror and do the exercise while looking at your Happy childhood photo in the mirror). Do this twice now and then as many times as possible in different circumstances during the day, such as while on the way to work or while cooking dinner, to integrate them into your new life. When singing your favourite song becomes a habit of yours, it becomes an effective tool for enhancing positive affects and managing emotions.",
             ],
-            ["Creating an attachment to nature for your Child is an effective way to increase joy and reduce negative emotions. On one day this week, go to a local park, wood or forest. Spend at least 5 minutes admiring a tree, attempting to appreciate its real beauty as you have never previously experienced. Repeat this process, including with other aspects of nature (e.g. sky, stars, plants, birds, rivers, sea, your favourite animal), until you feel you have developed an attachment to nature that helps regulate your emotions. Achieving this will help you want to spend more time in nature after this course ends."],
+            ["Creating an attachment to nature for your Child is an effective way to increase joy and reduce negative emotions. Go outside to a garden, local park, wood or forest. Spend at least 5 minutes admiring a tree, attempting to appreciate its real beauty as you have never previously experienced. Repeat this process, including with other aspects of nature (e.g. sky, stars, plants, birds, rivers, sea, your favourite animal), until you feel you have developed an attachment to nature that helps regulate your emotions. Achieving this will help you want to spend more time in nature after this course ends."],
             [
                 "With closed eyes, imagine the unhappy photo/avatar and project your negative emotions to the unhappy photo/avatar representing the Child.",
                 "While doing this:",
@@ -90,8 +91,8 @@ class ModelDecisionMaker:
                    "(iii) imaginatively cuddling your Child, by giving yourself a face/neck/head self-massage.",
                 "Repeat (i), (ii), (iii) until comforted and soothed, acquiring mastery over the trauma.",
             ],
-            ["Early in the morning, act like a child: loosen up facial and body muscles, open up your mouth and sing your favourite song while laughing (or at least smiling) on your own."],
-            ["Immediately after accomplishing something, e.g. doing household chores, having a conversation with a neighbour, or reading an article, smile at the thought of this as an achievement, then once you are comfortable, begin to laugh for at least ten seconds."],
+            ["For this exercise, try to act like a child: loosen up facial and body muscles, open up your mouth and sing your favourite song while laughing (or at least smiling) on your own."],
+            ["Think of something you have accomplished today, e.g. doing household chores, having a conversation with a neighbour, or reading an article, and smile at the thought of this as an achievement, then once you are comfortable, begin to laugh for at least ten seconds."],
             ["Looking at your happy photo/avatar, smile and then begin to laugh for at least ten seconds. Repeat this process at least three times."],
             ["At a time when you are alone, open your mouth slightly, loosen your face muscles, raise your eyebrows, then slowly and continuously repeat one of the following tones, each of which uses a minimum amount of energy: 'eh, eh, eh, eh'; or 'ah, ah, ah, ah'; or 'oh, oh, oh, oh'; or 'uh, uh, uh, uh'; or 'ye, ye, ye, ye'. If you need a subject to laugh at, you can laugh at the silliness of the exercise! Once this continuous intentional laughter becomes a habit, you would be able to shape it according to your personality and style to create your own brand of laughter."],
             ["Stare at the black vase. Laugh or at least smile for one minute the moment your perception changes and you see two white faces, conceived as Adult and Child, looking at each other (IT, ST, PT). Stare at the two white faces and laugh or at least smile for one minute the moment your perception changes and you see the black vase (IT, ST)."],
@@ -102,7 +103,7 @@ class ModelDecisionMaker:
                 "1. Without denying these feelings, try to reflect and contain them and avoid acting them out. Try to let go of the personal resentment. This may be hard and challenging but it is necessary for emotional growth. Here, you are taking a critical but constructive stance towards your Child and are exercising foresighted compassion.",
                 "2. Find a positive way of re-channeling the aggressive energy invoked by these feelings into productive work (e.g., going for some exercise, talking to a friend, etc.) and ultimately into creative work towards your noble goal in life.",
             ],
-            ["Challenge your usual ideological framework to weaken any one sided belief patterns and encourage spontaneity and examination of any issue from multiple perspectives. Practice this with subjects or themes that you have deep rooted beliefs about and you are also interested in. This may include any social, political, or ethical issue, such as marriage, sexual orientation or racism. For example, whatever your political viewpoint on a specific subject is, consider the subject both from a liberal and conservative or from a left wing and right wing point of view and try to understand both sides of the issue and challenge your dominant ideological framework. This does not mean that you would change your viewpoint but it allows you to see the subject from different perspectives and to be able to put yourself in other people's shoes. Consider a different question or issue daily for at least 5 minutes."],
+            ["Challenge your usual ideological framework to weaken any one sided belief patterns and encourage spontaneity and examination of any issue from multiple perspectives. Practice this with subjects or themes that you have deep rooted beliefs about and you are also interested in. This may include any social, political, or ethical issue, such as marriage, sexual orientation or racism. For example, whatever your political viewpoint on a specific subject is, consider the subject both from a liberal and conservative or from a left wing and right wing point of view and try to understand both sides of the issue and challenge your dominant ideological framework. This does not mean that you would change your viewpoint but it allows you to see the subject from different perspectives and to be able to put yourself in other people's shoes. Try to consider a question or issue that is different from what you may have thought of while practising this exercise in the past, and do so for at least 5 minutes."],
             ["Put together a list of inspirational affirmations by figures you admire. Choose the three that inspire you most. Read them out and repeat slowly for at least three minutes."],
             [
                 "The Adult becomes aware of the facets of the trauma triangle: internal persecutor, victim, and rescuer.",
