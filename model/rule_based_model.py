@@ -121,11 +121,13 @@ class ModelDecisionMaker:
                 "'To those human beings who are of any concern to me I wish suffering, desolation, sickness, ill-treatment, indignities—I wish that they should not remain unfamiliar with profound self-contempt, the torture of self-mistrust, the wretchedness of the vanquished: I have no pity for them, because I wish them the only thing that can prove today whether one is worth anything or not—that one endures'.",
                 "- So, thinking about your tragedy recite this quotation aloud and as soon as you reach the words:",
                 "'I wish suffering, desolation, sickness, ill-treatment, ...', start laughing and continue to laugh as you read out the whole quotation.",
+                "I just want to add that it is good to try this exercise and familiarise yourself with it now that you're in a positive mood, but I also suggest that you attempt it whenever you are experiencing negative emotions.",
             ],
             [
                 "- We un-(sub-)consciously use our internal working model (IWM) we learned from our early environment to interpret the social world for taking action.",
                 "- In many ways, we may unconsciously emulate the way our primary care-givers interpreted social interactions for taking action.",
                 "- Start to make adjustments in these interpretations to create more optimal consciously chosen pattern of behavior that correspond to your emotional growth.",
+                "It is best to think of this exercise now that you're in a positive mood, and even try it, but I would strongly recommend that you also attempt it whenever you are experiencing negative emotions.",
             ],
             [
                 "The Adult becomes aware of the facets of the trauma triangle: internal persecutor, victim, and rescuer.",
