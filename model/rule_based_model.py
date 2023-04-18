@@ -38,11 +38,11 @@ class ModelDecisionMaker:
             "16: Learning to be playful about your past pains",
             "17: Identifying patterns of acting out personal resentments",
             "18: Planning more constructive actions",
-            "19: Finding and bonding with your compassionate role model", #todo: add to fc
+            "19: Finding and bonding with your compassionate role model",
             "20: Updating our rigid beliefs to enhance creativity", 
             "21: Practicing Affirmations",
-            "22: Using laughter to come to terms with a tragedy", #todo: add to fc
-            "23: Try to become gradually aware of your IWM and the influence of your primary care-givers and early environment.", #todo: add to fc
+            "22: Using laughter to come to terms with a tragedy",
+            "23: Try to become gradually aware of your IWM and the influence of your primary care-givers and early environment.",
             "24: Recognizing and containing the internal persecutor",
             "25: Solving personal crises",
             "26: Discovering your true, free, and sovereign self in this age of emergency",
@@ -518,7 +518,8 @@ class ModelDecisionMaker:
                 },
                 "exercises": {
                     "Okay": [self.EXERCISE_TITLES[15], self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[7], self.EXERCISE_TITLES[12], self.EXERCISE_TITLES[14],
-                             self.EXERCISE_TITLES[8], self.EXERCISE_TITLES[17], self.EXERCISE_TITLES[18], self.EXERCISE_TITLES[26], self.EXERCISE_TITLES[13]],
+                             self.EXERCISE_TITLES[8], self.EXERCISE_TITLES[17], self.EXERCISE_TITLES[18], self.EXERCISE_TITLES[26], self.EXERCISE_TITLES[13],
+                             self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[22], self.EXERCISE_TITLES[23]],
                     "No, thank you": []
                 },
             },
