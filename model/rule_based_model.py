@@ -38,11 +38,14 @@ class ModelDecisionMaker:
             "16: Learning to be playful about your past pains",
             "17: Identifying patterns of acting out personal resentments",
             "18: Planning more constructive actions",
-            "19: Updating our rigid beliefs to enhance creativity",
-            "20: Practicing Affirmations", #todo: check this
-            "21: Recognizing and containing the internal persecutor",
-            "22: Solving personal crises",
-            "23: Discovering your true, free, and sovereign self in this age of emergency",
+            "19: Finding and bonding with your compassionate role model",
+            "20: Updating our rigid beliefs to enhance creativity",
+            "21: Practicing Affirmations",
+            "22: Using laughter to come to terms with a tragedy",
+            "23: Try to become gradually aware of your IWM and the influence of your primary care-givers and early environment.",
+            "24: Recognizing and containing the internal persecutor",
+            "25: Solving personal crises",
+            "26: Discovering your true, free, and sovereign self in this age of emergency",
         ]
 
         self.TITLE_TO_EXERCISE = {
@@ -92,7 +95,7 @@ class ModelDecisionMaker:
                 "Repeat (i), (ii), (iii) until comforted and soothed, acquiring mastery over the trauma.",
             ],
             ["For this exercise, try to act like a child: loosen up facial and body muscles, open up your mouth and sing your favourite song while laughing (or at least smiling) on your own."],
-            ["Think of something you have accomplished today, e.g. doing household chores, having a conversation with a neighbour, or reading an article, and smile at the thought of this as an achievement, then once you are comfortable, begin to laugh for at least ten seconds."],
+            ["Immediately after accomplishing something, e.g. doing household chores, having a conversation with a neighbour, or reading an article, and smile at the thought of this as an achievement, then once you are comfortable, begin to laugh for at least ten seconds."],
             ["Looking at your happy photo/avatar, smile and then begin to laugh for at least ten seconds. Repeat this process at least three times."],
             ["At a time when you are alone, open your mouth slightly, loosen your face muscles, raise your eyebrows, then slowly and continuously repeat one of the following tones, each of which uses a minimum amount of energy: 'eh, eh, eh, eh'; or 'ah, ah, ah, ah'; or 'oh, oh, oh, oh'; or 'uh, uh, uh, uh'; or 'ye, ye, ye, ye'. If you need a subject to laugh at, you can laugh at the silliness of the exercise! Once this continuous intentional laughter becomes a habit, you would be able to shape it according to your personality and style to create your own brand of laughter."],
             ["Stare at the black vase. Laugh or at least smile for one minute the moment your perception changes and you see two white faces, conceived as Adult and Child, looking at each other (IT, ST, PT). Stare at the two white faces and laugh or at least smile for one minute the moment your perception changes and you see the black vase (IT, ST)."],
@@ -103,8 +106,27 @@ class ModelDecisionMaker:
                 "1. Without denying these feelings, try to reflect and contain them and avoid acting them out. Try to let go of the personal resentment. This may be hard and challenging but it is necessary for emotional growth. Here, you are taking a critical but constructive stance towards your Child and are exercising foresighted compassion.",
                 "2. Find a positive way of re-channeling the aggressive energy invoked by these feelings into productive work (e.g., going for some exercise, talking to a friend, etc.) and ultimately into creative work towards your noble goal in life.",
             ],
+            [
+                "Look in your past life for a compassionate figure who impressed you by being kind and helpful with some words of wisdom when you had problems.",
+                "For example, an older relative or friend, family acquaintance, teacher, counsellor or therapist who may have passed away or may not be contactable.",
+                "Remember the emotions you went through when you received kindness and compassion form this figure and how emotional this was for you.",
+                "Focus your attention and adopt this figure as your idealised role model.",
+                "Create a platonic loving bond with this figure by singing aloud your favourite love song when remembering all your cherished memories of them.",
+                "One particular song you may try is 'I cannot help falling in love with you'.",
+            ],
             ["Challenge your usual ideological framework to weaken any one sided belief patterns and encourage spontaneity and examination of any issue from multiple perspectives. Practice this with subjects or themes that you have deep rooted beliefs about and you are also interested in. This may include any social, political, or ethical issue, such as marriage, sexual orientation or racism. For example, whatever your political viewpoint on a specific subject is, consider the subject both from a liberal and conservative or from a left wing and right wing point of view and try to understand both sides of the issue and challenge your dominant ideological framework. This does not mean that you would change your viewpoint but it allows you to see the subject from different perspectives and to be able to put yourself in other people's shoes. Try to consider a question or issue that is different from what you may have thought of while practising this exercise in the past, and do so for at least 5 minutes."],
             ["Put together a list of inspirational affirmations by figures you admire. Choose the three that inspire you most. Read them out and repeat slowly for at least three minutes."],
+            [
+                "- After the initial assimilation of a tragedy, no doubt with an upsurge in negative emotions, remember that Nietzsche wished all people he cared for severe suffering and desolation, which is a very funny thing to do:",
+                "'To those human beings who are of any concern to me I wish suffering, desolation, sickness, ill-treatment, indignities—I wish that they should not remain unfamiliar with profound self-contempt, the torture of self-mistrust, the wretchedness of the vanquished: I have no pity for them, because I wish them the only thing that can prove today whether one is worth anything or not—that one endures'.",
+                "- So, thinking about your tragedy recite this quotation aloud and as soon as you reach the words:",
+                "'I wish suffering, desolation, sickness, ill-treatment, ...', start laughing and continue to laugh as you read out the whole quotation.",
+            ],
+            [
+                "- We un-(sub-)consciously use our internal working model (IWM) we learned from our early environment to interpret the social world for taking action.",
+                "- In many ways, we may unconsciously emulate the way our primary care-givers interpreted social interactions for taking action.",
+                "- Start to make adjustments in these interpretations to create more optimal consciously chosen pattern of behavior that correspond to your emotional growth.",
+            ],
             [
                 "The Adult becomes aware of the facets of the trauma triangle: internal persecutor, victim, and rescuer.",
                 "The Adult examines the effects of this triangle (narcissism and lack of creativity) in daily life and previous experiences.",
@@ -149,7 +171,7 @@ class ModelDecisionMaker:
             # The rest should just be recommended in numerical order.
         }
 
-        self.exercises = [i for i in range(1, 24)]
+        self.exercises = [i for i in range(1, 25)]
 
         # Goes from user id to actual value
         self.current_run_ids = {}
@@ -421,7 +443,7 @@ class ModelDecisionMaker:
                     "no": "internal_persecutor_victim",
                 },
                 "exercises": {
-                    "yes": [self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[11]],
+                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
                     "no": [self.EXERCISE_TITLES[15]]
                 },
             },
@@ -433,7 +455,7 @@ class ModelDecisionMaker:
                     "no": "internal_persecutor_controlling",
                 },
                 "exercises": {
-                    "yes": [self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[11]],
+                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
                     "no": [self.EXERCISE_TITLES[15]]
                 },
             },
@@ -445,7 +467,7 @@ class ModelDecisionMaker:
                 "no": "internal_persecutor_accusing"
                 },
                 "exercises": {
-                "yes": [self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[11]],
+                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
                 "no": [self.EXERCISE_TITLES[15]]
                 },
             },
@@ -457,7 +479,7 @@ class ModelDecisionMaker:
                 "no": lambda user_id, db_session, curr_session, app: self.get_next_question(user_id),
                 },
                 "exercises": {
-                "yes": [self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[11]],
+                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
                 "no": [self.EXERCISE_TITLES[15]],
                 },
             },
@@ -470,7 +492,7 @@ class ModelDecisionMaker:
                 },
                 "exercises": {
                     "yes": [self.EXERCISE_TITLES[15]],
-                    "no": [self.EXERCISE_TITLES[19], self.EXERCISE_TITLES[15]],
+                    "no": [self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[15]],
                 },
             },
             "personal_crisis": {
@@ -481,7 +503,7 @@ class ModelDecisionMaker:
                     "no": lambda user_id, db_session, curr_session, app: self.get_next_question(user_id),
                 },
                 "exercises": {
-                    "yes": [self.EXERCISE_TITLES[22], self.EXERCISE_TITLES[15]],
+                    "yes": [self.EXERCISE_TITLES[25], self.EXERCISE_TITLES[15]],
                     "no": [self.EXERCISE_TITLES[15]],
                 },
             },
@@ -495,8 +517,8 @@ class ModelDecisionMaker:
                     "No, thank you": "ending_prompt"
                 },
                 "exercises": {
-                    "Okay": [self.EXERCISE_TITLES[15], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[7], self.EXERCISE_TITLES[12], self.EXERCISE_TITLES[14],
-                             self.EXERCISE_TITLES[8], self.EXERCISE_TITLES[17], self.EXERCISE_TITLES[18], self.EXERCISE_TITLES[23], self.EXERCISE_TITLES[13]],
+                    "Okay": [self.EXERCISE_TITLES[15], self.EXERCISE_TITLES[21], self.EXERCISE_TITLES[7], self.EXERCISE_TITLES[12], self.EXERCISE_TITLES[14],
+                             self.EXERCISE_TITLES[8], self.EXERCISE_TITLES[17], self.EXERCISE_TITLES[18], self.EXERCISE_TITLES[26], self.EXERCISE_TITLES[13]],
                     "No, thank you": []
                 },
             },
@@ -538,8 +560,19 @@ class ModelDecisionMaker:
             "trying_exercise": {
                 "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, "All emotions - Please try to go through this exercise now. When you finish, press 'continue'", has_emo=False),
 
-                "choices": {"continue": "user_found_useful"},
-                "exercises": {"continue": []},
+                "choices": {"Continue": "user_found_useful", "I could not do this exercise": "user_could_not_do_exercise"},
+                "exercises": {"Continue": [], "I could not do this exercise": []},
+            },
+            "user_could_not_do_exercise": {
+                "model_prompt": "No worries at all. It would be great if you could give it a go at some point this week, whenever you have the opportunity. Would you like me to recommend a different exercise for today?",
+                "choices": {
+                    "Okay": "follow_up_suggestions",
+                    "No, thank you": "ending_prompt"
+                },
+                "exercises": {
+                    "Okay": [],
+                    "No, thank you": []
+                },
             },
             "user_found_useful": {
                 "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, "All emotions - Do you feel better or worse after having taken this exercise?", has_emo=False),
@@ -950,9 +983,6 @@ class ModelDecisionMaker:
             current_choice == "suggestions" or current_choice == "follow_up_suggestions"
         ):
 
-            # PRE: user_choice is a string representing a number from 1-20,
-            # or the title for the corresponding exercise
-
             try:
                 current_exercise = self.TITLE_TO_EXERCISE[user_choice]
             except KeyError:
@@ -1037,6 +1067,8 @@ class ModelDecisionMaker:
                 and current_choice != "new_exercise_same"
                 and current_choice != "after_classification_negative"
                 and current_choice != "after_classification_antisocial"
+                and current_choice != "user_could_not_do_exercise"
+                and current_choice != "trying_exercise"
             ):
                 user_choice = user_choice.lower()
 
