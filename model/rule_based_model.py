@@ -173,7 +173,7 @@ class ModelDecisionMaker:
             # The rest should just be recommended in numerical order.
         }
 
-        self.exercises = [i for i in range(1, 25)]
+        self.exercises = [i for i in range(1, 27)]
 
         # Goes from user id to actual value
         self.current_run_ids = {}
