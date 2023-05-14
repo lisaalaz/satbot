@@ -15,7 +15,7 @@ import time
 class ModelDecisionMaker:
     def __init__(self):
 
-        self.data = pd.read_csv('/Users/lisaxy/satbot2.0/model/empatheticPersonas12_responses_only_with_scores.csv', encoding='ISO-8859-1') #change path
+        self.data = pd.read_csv('ep12.csv', encoding='ISO-8859-1') #change path
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.EXERCISE_TITLES = [
