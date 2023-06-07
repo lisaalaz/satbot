@@ -15,7 +15,7 @@ import time
 class ModelDecisionMaker:
     def __init__(self):
 
-        self.data = pd.read_csv('ep12.csv', encoding='ISO-8859-1') #change path
+        self.data = pd.read_csv('/Users/lisaxy/satbot2.0/model/empatheticPersonas12_responses_only_with_scores.csv', encoding='ISO-8859-1') #change path
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.EXERCISE_TITLES = [
@@ -437,54 +437,6 @@ class ModelDecisionMaker:
                     "no": [self.EXERCISE_TITLES[15]],
                 },
             },
-            "internal_persecutor_saviour": {
-                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you believe that you should be the saviour of someone else?", has_emo=True),
-
-                "choices": {
-                    "yes": "project_emotion",
-                    "no": "internal_persecutor_victim",
-                },
-                "exercises": {
-                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
-                    "no": [self.EXERCISE_TITLES[15]]
-                },
-            },
-            "internal_persecutor_victim": {
-                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you see yourself as the victim, blaming someone else for how negative you feel?", has_emo=True),
-
-                "choices": {
-                    "yes": "project_emotion",
-                    "no": "internal_persecutor_controlling",
-                },
-                "exercises": {
-                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
-                    "no": [self.EXERCISE_TITLES[15]]
-                },
-            },
-            "internal_persecutor_controlling": {
-                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you feel that you are trying to control someone?", has_emo=True),
-
-                "choices": {
-                "yes": "project_emotion",
-                "no": "internal_persecutor_accusing"
-                },
-                "exercises": {
-                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
-                "no": [self.EXERCISE_TITLES[15]]
-                },
-            },
-            "internal_persecutor_accusing": {
-                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Are you always blaming and accusing yourself for when something goes wrong?", has_emo=True),
-
-                "choices": {
-                "yes": "project_emotion",
-                "no": lambda user_id, db_session, curr_session, app: self.get_next_question(user_id),
-                },
-                "exercises": {
-                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
-                "no": [self.EXERCISE_TITLES[15]],
-                },
-            },
             "rigid_thought": {
                 "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - In previous conversations, have you considered other viewpoints presented?", has_emo=True),
 
@@ -507,6 +459,54 @@ class ModelDecisionMaker:
                 "exercises": {
                     "yes": [self.EXERCISE_TITLES[25], self.EXERCISE_TITLES[15]],
                     "no": [self.EXERCISE_TITLES[15]],
+                },
+            },
+            "internal_persecutor_victim": {
+                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you see yourself as the victim, blaming someone else for how negative you feel?", has_emo=True),
+
+                "choices": {
+                    "yes": "project_emotion",
+                    "no": "internal_persecutor_accusing",
+                },
+                "exercises": {
+                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
+                    "no": [self.EXERCISE_TITLES[15]]
+                },
+            },
+            "internal_persecutor_accusing": {
+                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Are you always blaming and accusing yourself for when something goes wrong?", has_emo=True),
+
+                "choices": {
+                "yes": "project_emotion",
+                "no": "internal_persecutor_controlling",
+                },
+                "exercises": {
+                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
+                "no": [self.EXERCISE_TITLES[15]],
+                },
+            },
+            "internal_persecutor_controlling": {
+                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you feel that you are trying to control someone?", has_emo=True),
+
+                "choices": {
+                "yes": "project_emotion",
+                "no": "internal_persecutor_saviour"
+                },
+                "exercises": {
+                "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
+                "no": [self.EXERCISE_TITLES[15]]
+                },
+            },
+            "internal_persecutor_saviour": {
+                "model_prompt": lambda user_id, db_session, curr_session, app: self.get_model_prompt(user_id, app, db_session, " - Do you believe that you should be the saviour of someone else?", has_emo=True),
+
+                "choices": {
+                    "yes": "project_emotion",
+                    "no": "project_emotion",
+                },
+                "exercises": {
+                    "yes": [self.EXERCISE_TITLES[24], self.EXERCISE_TITLES[20], self.EXERCISE_TITLES[11]],
+                    "no": [self.EXERCISE_TITLES[15]]
                 },
             },
             ################# POSITIVE EMOTION (HAPPY/CONTENT OR LOVING/CARING) #################
@@ -670,7 +670,7 @@ class ModelDecisionMaker:
         self.datasets[user_id] = pd.DataFrame(columns=['sentences'])
 
     def initialise_remaining_choices(self, user_id):
-        self.remaining_choices[user_id] = ["displaying_antisocial_behaviour", "internal_persecutor_saviour", "personal_crisis", "rigid_thought"]
+        self.remaining_choices[user_id] = ["displaying_antisocial_behaviour", "rigid_thought", "personal_crisis"]
 
     def save_location(self, user_id, db_session, curr_session, app, again):
         if again:
@@ -752,7 +752,7 @@ class ModelDecisionMaker:
 
     def get_next_question(self, user_id):
         if self.remaining_choices[user_id] == []:
-            return "project_emotion"
+            return "internal_persecutor_victim"
         else:
             selected_choice = np.random.choice(self.remaining_choices[user_id])
             self.remaining_choices[user_id].remove(selected_choice)
