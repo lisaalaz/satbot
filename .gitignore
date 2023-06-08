@@ -1,0 +1,13 @@
+.env
+**/bin
+**/include
+**/lib
+**/migrations
+**/node_modules
+app.db
+pyvenv.cfg
+.Python 
+*.pdf
+*.pt
+**/share
+**/__pycache__
